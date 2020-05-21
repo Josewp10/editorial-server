@@ -16,22 +16,22 @@ const ruta_autenticacion = require("./routes/autenticacion");
 app.use(vs, ruta_autenticacion);
 
 const ruta_reporte = require("./routes/reportes");
-app.use(vs, ruta_reporte);
+app.use(ruta_reporte);
 
 const ruta_reporteConsultado = require("./routes/reporteConsulta");
-app.use(vs, ruta_reporteConsultado);
+app.use(ruta_reporteConsultado);
 
 const ruta_obra = require("./routes/obra");
-app.use(vs, ruta_obra);
+app.use(ruta_obra);
 
 const ruta_seguimiento = require("./routes/seguimiento");
-app.use(vs, ruta_seguimiento);
+app.use(ruta_seguimiento);
 
 const ruta_tareas = require("./routes/tareas");
-app.use(vs, ruta_tareas);
+app.use(ruta_tareas);
 
 const ruta_envioCorreo = require("./routes/envioCorreo");
-app.use(vs, ruta_envioCorreo);
+app.use(ruta_envioCorreo);
 
 //Puerto
 const port = process.env.PORT || 3001;
