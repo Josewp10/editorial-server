@@ -25,7 +25,7 @@ const ruta_obra = require("./routes/obra");
 app.use(ruta_obra);
 
 const ruta_seguimiento = require("./routes/seguimiento");
-app.use(ruta_seguimiento);
+app.use(vs, ruta_seguimiento);
 
 const ruta_tareas = require("./routes/tareas");
 app.use(ruta_tareas);
