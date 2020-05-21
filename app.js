@@ -16,26 +16,26 @@ const ruta_autenticacion = require("./routes/autenticacion");
 app.use(vs, ruta_autenticacion);
 
 const ruta_reporte = require("./routes/reportes");
-app.use(ruta_reporte);
+app.use(vs, ruta_reporte);
 
 const ruta_reporteConsultado = require("./routes/reporteConsulta");
-app.use(ruta_reporteConsultado);
+app.use(vs, ruta_reporteConsultado);
 
 const ruta_obra = require("./routes/obra");
-app.use(ruta_obra);
+app.use(vs, ruta_obra);
 
 const ruta_seguimiento = require("./routes/seguimiento");
-app.use(ruta_seguimiento);
+app.use(vs, ruta_seguimiento);
 
 const ruta_tareas = require("./routes/tareas");
-app.use(ruta_tareas);
+app.use(vs, ruta_tareas);
 
 const ruta_envioCorreo = require("./routes/envioCorreo");
-app.use(ruta_envioCorreo);
+app.use(vs, ruta_envioCorreo);
 
 //Puerto
 const port = process.env.PORT || 3001;
 //Levantamiento
 app.listen(port, () => {
-  console.log(`Escuchando API en http://localhost:${port}`);
+  console.log(`Escuchando API en PORT:${port}`);
 });
